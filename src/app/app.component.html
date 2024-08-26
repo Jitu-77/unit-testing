@@ -1,0 +1,23 @@
+<!-- SCENARIO 1 -->
+
+<!-- <button class="btn" (click)="subscribe()" [disabled]="isSubscribed">
+{{name}}
+</button> -->
+
+<!-- SCENARIO 2 -->
+<button class="btn" (click)="subscribe()" [disabled]="isSubscribed" *ngIf="!isSubscribed">
+{{name}}
+</button>
+<button class="btn"  [disabled]="isSubscribed" *ngIf="isSubscribed">
+{{name}}
+</button>
+<!-- SCENARIO 3 API CALL -->
+
+<div >
+<p *ngFor="let item of marksList" appGrade >
+{{item | marks}}
+</p>
+</div>
+<router-outlet>
+    
+</router-outlet>
